@@ -125,6 +125,39 @@
 
     .nav-links a:hover::after { width: 100%; }
 
+    .nav-lang {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.8rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .lang-switch-btn {
+      border: none;
+      background: none;
+      padding: 0.25rem 0.5rem;
+      margin: 0;
+      cursor: pointer;
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      pointer-events: auto;
+      border: 1px solid transparent;
+    }
+
+    .lang-switch-btn.active {
+      color: var(--color-text);
+      font-weight: 500;
+      border-color: var(--color-border);
+      background: var(--color-bg-subtle);
+    }
+
+    .lang-switch-btn:hover {
+      color: var(--color-text);
+      border-color: var(--color-border);
+    }
+
     @media (max-width: 860px) {
       nav { padding: 1rem 0; }
       .nav-links { gap: 1.25rem; }
@@ -135,6 +168,15 @@
       .nav-links { gap: 1rem; }
       .hero { text-align: left; }
       .cta-group { justify-content: flex-start; }
+    }
+
+    /* Language containers */
+    .lang {
+      display: block;
+    }
+
+    .lang[hidden] {
+      display: none;
     }
 
     /* Container */
@@ -588,19 +630,25 @@
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
-      <a href="#home" class="nav-logo">宸聿資訊 | Second Opinion</a>
+      <a href="#home" class="nav-logo" data-i18n="brand">宸聿資訊 | Second Opinion</a>
       <ul class="nav-links">
-        <li><a href="#home">首頁</a></li>
-        <li><a href="#service">服務</a></li>
-        <li><a href="#scenarios">情境</a></li>
-        <li><a href="#pricing">價格</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#about">關於</a></li>
-        <li><a href="#booking">預約</a></li>
+        <li><a href="#home" data-i18n="nav.home">首頁</a></li>
+        <li><a href="#service" data-i18n="nav.service">服務</a></li>
+        <li><a href="#scenarios" data-i18n="nav.scenarios">情境</a></li>
+        <li><a href="#pricing" data-i18n="nav.pricing">價格</a></li>
+        <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+        <li><a href="#about" data-i18n="nav.about">關於</a></li>
+        <li><a href="#booking" data-i18n="nav.booking">預約</a></li>
+          <li class="nav-lang">
+            <button type="button" class="lang-switch-btn active" data-lang-switch="zh">中</button>
+            <span>/</span>
+            <button type="button" class="lang-switch-btn" data-lang-switch="en">EN</button>
+          </li>
       </ul>
     </div>
   </nav>
 
+    <div class="lang lang-zh lang-active" data-lang="zh">
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="container">
@@ -998,12 +1046,384 @@
     </div>
   </footer>
 
+  </div> <!-- /.lang-zh -->
+
+  <div class="lang lang-en" data-lang="en" hidden>
+    <!-- Hero Section (EN) -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>60-Minute Second Opinion for Critical Decisions</h1>
+        <p class="hero-subtitle">
+          Clarify your technical and product decisions before you commit to build
+        </p>
+    
+        <p class="hero-note">
+          Focused on <strong>technology choices, system architecture, and product direction</strong> —
+          not management coaching or execution outsourcing.
+        </p>
+    
+        <p class="hero-note">
+          This is typically where teams get stuck after moving fast with AI.
+        </p>
+    
+        <ul class="hero-bullets">
+          <li>
+            We moved fast with AI / vibe coding —
+            now we’re unsure whether to refactor, change frameworks,
+            or just live with what we shipped.
+          </li>
+          <li>
+            Which parts of the MVP architecture actually matter,
+            and which ones are premature or unnecessary at this stage?
+          </li>
+          <li>
+            Is this product direction worth continuing,
+            or are we scaling something that hasn’t been properly validated yet?
+          </li>
+        </ul>
+    
+        <div class="cta-group">
+          <a href="https://lin.ee/52meajk" class="btn btn-primary" target="_blank" rel="noopener">
+            Book via LINE
+          </a>
+          <a href="#service" class="btn btn-secondary">
+            View the service
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Social Proof (EN) -->
+    <section>
+      <div class="container">
+        <div class="social-proof">
+          <div class="card badge">
+            <div class="badge-icon">🎯</div>
+            <div class="badge-title">Execution-Oriented</div>
+            <div class="badge-desc">Advice is grounded in real-world delivery constraints, not abstract theory.</div>
+          </div>
+          <div class="card badge">
+            <div class="badge-icon">📊</div>
+            <div class="badge-title">Structured Thinking</div>
+            <div class="badge-desc">We break down options, trade-offs, and risks so you can see the full picture.</div>
+          </div>
+          <div class="card badge">
+            <div class="badge-icon">📄</div>
+            <div class="badge-title">Tangible Output</div>
+            <div class="badge-desc">You receive a one-page summary with recommendations, risks, and next steps.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who is this for (EN) -->
+    <section id="service">
+      <div class="container">
+        <h2 class="section-title">Who This Is For</h2>
+        <p class="section-description">When you are stuck on technical direction, architecture trade-offs, or product bets, and need a sharp second opinion.</p>
+
+        <div class="personas">
+          <div class="card persona-card">
+            <div class="persona-title">
+              <span class="persona-icon">🚀</span>
+              <h4>Founders / Product Owners</h4>
+            </div>
+            <p>Before investing in development, you want clarity on product direction, tech approach, and validation strategy.</p>
+          </div>
+
+          <div class="card persona-card">
+            <div class="persona-title">
+              <span class="persona-icon">🧩</span>
+              <h4>CTOs / Tech Leads</h4>
+            </div>
+            <p>You are making calls on stack, architecture, scalability and maintainability, and want a sparring partner.</p>
+          </div>
+
+          <div class="card persona-card">
+            <div class="persona-title">
+              <span class="persona-icon">🧠</span>
+              <h4>Product Managers</h4>
+            </div>
+            <p>You need a realistic view of technical cost and delivery risk before committing to a new product line or major feature.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scenarios (EN) -->
+    <section id="scenarios">
+      <div class="container">
+        <h2 class="section-title">Typical Decision Scenarios</h2>
+        <p class="section-description">This Second Opinion is focused on technology choices, system architecture, and product direction. Common topics include:</p>
+
+        <div class="benefits" style="max-width: 850px;">
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>Technology Choices</strong>
+              <p>Which framework, cloud service, or architecture style to adopt — and what it really costs over time.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>Architecture &amp; Scalability</strong>
+              <p>How to balance future scalability with today's constraints, and where to keep things intentionally simple.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>MVP Scope &amp; Validation</strong>
+              <p>What belongs in the first version, what can wait, and how to design a path to de-risk the biggest assumptions.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>Vendor / Outsourcing Evaluation</strong>
+              <p>Whether proposals are maintainable, handover-friendly, and avoid hidden lock-in and long-term cost traps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What you'll get (EN) -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">What You Get</h2>
+        <p class="section-description">A 60-minute deep-dive that produces a concrete decision output and next steps.</p>
+
+        <div class="benefits">
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>Decision Framework</strong>
+              <p>Clear criteria and trade-off logic to decide whether to proceed, defer, or pivot — and why.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>Risk &amp; Blind Spot Analysis</strong>
+              <p>Technical, delivery, and maintainability risks that are easy to overlook when you are close to the problem.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>Alternative Options</strong>
+              <p>Not just “do it or not”, but realistic options with pros/cons and where each option fits best.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>Validation Path &amp; Milestones</strong>
+              <p>If you proceed, we outline which steps to take first to reduce risk, and what success looks like.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>One-Page Summary (within 24 hours)</strong>
+              <p>Written output you can share with your team: recommendations, risks, alternatives, and action items.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process (EN) -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-description">Three simple steps to get a sharp Second Opinion.</p>
+
+        <div class="process">
+          <div class="card process-step">
+            <div class="process-number">1</div>
+            <h4>Share Context (3–5 minutes)</h4>
+            <p>You answer a short set of questions about your situation, options, and main concerns.</p>
+          </div>
+
+          <div class="card process-step">
+            <div class="process-number">2</div>
+            <h4>60-Minute Zoom Session</h4>
+            <p>We walk through your options, trade-offs, and risks, and clarify what decision you need to make.</p>
+          </div>
+
+          <div class="card process-step">
+            <div class="process-number">3</div>
+            <h4>One-Page Summary</h4>
+            <p>Within 24 hours, you receive a concise summary with recommendations, risks, and next steps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing (EN) -->
+    <section id="pricing">
+      <div class="container">
+        <h2 class="section-title">Pricing</h2>
+
+        <div class="pricing-card card">
+          <h3>60-Minute Second Opinion</h3>
+          <div class="price">US$100</div>
+
+          <p>One-off fee, including:</p>
+          <ul style="text-align: left; max-width: 460px; margin: 1.5rem 0; color: var(--color-text-light); padding-left: 1.5rem; line-height: 1.8;">
+            <li style="margin-bottom: 0.75rem;">60-minute deep-dive session (technology / architecture / product direction)</li>
+            <li style="margin-bottom: 0.75rem;">One-page written summary within 24 hours</li>
+            <li>One follow-up email within 7 days to clarify the summary</li>
+          </ul>
+
+          <p class="price-note">💡 This fee can be credited towards longer-term advisory or follow-up architecture work.</p>
+
+          <a href="https://lin.ee/52meajk" class="btn btn-primary" style="margin-top: var(--spacing-md);" target="_blank" rel="noopener">Book via LINE</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (EN) -->
+    <section id="faq">
+      <div class="container">
+        <h2 class="section-title">FAQ</h2>
+
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-question">Q: What exactly is included in this service?</div>
+            <div class="faq-answer">A: This is a decision advisory session. We focus on technology choices, architecture, and product direction, and provide recommendations and next steps. Final decisions remain with you.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Q: Is the conversation confidential? Can we sign an NDA?</div>
+            <div class="faq-answer">A: Yes. All discussions are confidential, and we can sign your NDA or provide one before the call.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Q: What situations are a good fit?</div>
+            <div class="faq-answer">A: When you are deciding whether to rebuild, re-architect, adopt a new technology, commit to a new product direction, or evaluate an outsourcing proposal — and you want a sharp second opinion.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Q: What do I need to prepare?</div>
+            <div class="faq-answer">A: After booking, we send you a short intake form. 3–5 minutes is usually enough; slides are not required.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Q: Do you write code or implement for us?</div>
+            <div class="faq-answer">A: Not in this service. The focus is on decisions and recommendations. If you need follow-on support (architecture review, implementation guidance, vendor evaluation), we can discuss separately.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Q: What if I feel I didn't get value?</div>
+            <div class="faq-answer">A: We align expectations before the call and provide a written summary plus one follow-up email. If you truly feel you received no usable output, contact us within 48 hours and we will review the case.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About (EN) -->
+    <section id="about">
+      <div class="container">
+        <div class="about-content">
+          <h2 class="section-title">About CY Information</h2>
+
+          <div class="about-intro">
+            <p>
+              CY Information focuses on Second Opinion work around <strong>technology choices, system architecture, and product direction</strong>.
+              We bring around 10 years of hands-on experience across greenfield products and scaling existing systems.
+            </p>
+
+            <p>Core strengths:</p>
+            <div class="about-highlights">
+              <div class="about-highlight">Technology choice &amp; trade-offs</div>
+              <div class="about-highlight">Pragmatic architecture</div>
+              <div class="about-highlight">MVP design &amp; validation</div>
+              <div class="about-highlight">Cost / performance / maintainability</div>
+            </div>
+
+            <p style="margin-bottom: 0;">
+              The goal is not a “perfect design on paper”, but decisions you can actually execute with your current team and constraints.
+            </p>
+          </div>
+
+          <p style="margin-top: var(--spacing-md); margin-bottom: var(--spacing-md);">
+            A snapshot of our background:
+          </p>
+
+          <div class="bio-grid">
+            <div class="card bio-card">
+              <div class="bio-kicker">Architecture</div>
+              <div class="bio-title">From 0→1 to a foundation that can evolve</div>
+              <p class="bio-desc">
+                Experience designing cloud-native systems (APIs, databases, caching, async flows, notifications),
+                with a bias towards “simple first, evolvable later”.
+              </p>
+            </div>
+
+            <div class="card bio-card">
+              <div class="bio-kicker">Scale</div>
+              <div class="bio-title">Scaling and stability under real constraints</div>
+              <p class="bio-desc">
+                Familiar with latency, throughput, availability and cost trade-offs, and how to spot likely bottlenecks and failure modes early.
+              </p>
+            </div>
+
+            <div class="card bio-card">
+              <div class="bio-kicker">Product</div>
+              <div class="bio-title">Aligning tech decisions with product proof</div>
+              <p class="bio-desc">
+                Turning ideas into testable paths: defining MVP scope, milestones, and cheap validation steps so you learn fast without over-building.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA (EN) -->
+    <section id="booking">
+      <div class="container">
+        <div class="final-cta">
+          <h2 style="margin-bottom: 1rem;">Ready to make better technical and product decisions?</h2>
+          <p style="margin-bottom: 2rem; color: var(--color-text-light);">Spend 60 minutes now to avoid expensive rework later.</p>
+          <div class="cta-group">
+            <a href="https://lin.ee/52meajk" class="btn btn-primary" target="_blank" rel="noopener">Book via LINE</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@montfeatures.com&su=%E5%AE%B8%E8%81%BF%E8%B3%87%E8%A8%8A%E9%A1%A7%E5%95%8F%E6%9C%8D%E5%8B%99%E8%AB%AE%E8%A9%A2" class="btn btn-secondary" target="_blank" rel="noopener">Email (Gmail)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (EN) -->
+    <footer style="text-align: center; padding: var(--spacing-lg) 0; border-top: 1px solid var(--color-border); margin-top: var(--spacing-xl);">
+      <div class="container">
+        <p style="color: var(--color-text-light); font-size: 0.9rem;">© 2026 CY Information. All rights reserved.</p>
+      </div>
+    </footer>
+  </div> <!-- /.lang-en -->
+
   <script>
-    // Smooth scroll (fallback)
+    // Helper: get active language container
+    function getActiveLangContainer() {
+      return document.querySelector('.lang.lang-active');
+    }
+
+    // Smooth scroll (language-aware)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
-        const target = document.querySelector(href);
+        const activeLang = getActiveLangContainer();
+        const target = activeLang ? activeLang.querySelector(href) : document.querySelector(href);
         if (!target) return;
         e.preventDefault();
         const nav = document.querySelector('nav');
@@ -1013,22 +1433,79 @@
       });
     });
 
-    // Copy email helper
-    document.querySelectorAll('[data-copy-email]').forEach(btn => {
-      btn.addEventListener('click', async () => {
-        const email = btn.getAttribute('data-copy-email');
-        if (!email) return;
-        const original = btn.textContent;
-        try {
-          await navigator.clipboard.writeText(email);
-          btn.textContent = `已複製信箱：${email}`;
-          setTimeout(() => (btn.textContent = original), 2000);
-        } catch (err) {
-          btn.textContent = `請手動複製：${email}`;
-          setTimeout(() => (btn.textContent = original), 2500);
-        }
+    // Language switch
+    const langButtons = document.querySelectorAll('[data-lang-switch]');
+    const i18nDict = {
+      zh: {
+        'brand': '宸聿資訊 | Second Opinion',
+        'nav.home': '首頁',
+        'nav.service': '服務',
+        'nav.scenarios': '情境',
+        'nav.pricing': '價格',
+        'nav.faq': 'FAQ',
+        'nav.about': '關於',
+        'nav.booking': '預約'
+      },
+      en: {
+        'brand': 'CY Advisory',
+        'nav.home': 'Home',
+        'nav.service': 'Service',
+        'nav.scenarios': 'Scenarios',
+        'nav.pricing': 'Pricing',
+        'nav.faq': 'FAQ',
+        'nav.about': 'About',
+        'nav.booking': 'Book'
+      }
+    };
+
+    function applyNavI18n(lang) {
+      const dict = i18nDict[lang] || i18nDict.zh;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (!key) return;
+        if (dict[key]) el.textContent = dict[key];
+      });
+    }
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang === 'en' ? 'en' : 'zh-Hant';
+      applyNavI18n(lang);
+      document.querySelectorAll('.lang').forEach(el => {
+        const isActive = el.getAttribute('data-lang') === lang;
+        el.classList.toggle('lang-active', isActive);
+        el.hidden = !isActive;
+      });
+      langButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang-switch') === lang);
+      });
+      try {
+        localStorage.setItem('cy-lang', lang);
+      } catch (_) {}
+    }
+
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang-switch') || 'zh';
+        setLanguage(lang);
       });
     });
+
+    // Debug (safe): if buttons are not found, log once
+    if (!langButtons || langButtons.length === 0) {
+      console.warn('[lang] No language switch buttons found.');
+    }
+
+    // Initialize language from storage
+    try {
+      const stored = localStorage.getItem('cy-lang');
+      if (stored === 'en' || stored === 'zh') {
+        setLanguage(stored);
+      } else {
+        setLanguage('zh');
+      }
+    } catch (_) {
+      setLanguage('zh');
+    }
   </script>
 </body>
 </html>
