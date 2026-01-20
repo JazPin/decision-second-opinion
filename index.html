@@ -15,12 +15,12 @@
   </script>
 
   <!-- SEO Meta Tags -->
-  <title>60 分鐘關鍵決策 Second Opinion | 宸聿資訊 CY Information</title>
-  <meta name="description" content="專注於技術選型、系統架構與產品方向的 60 分鐘 Second Opinion。會後提供 1 頁摘要與行動清單，協助 Founder/產品負責人/CTO 在投入開發前降低風險。NT$3,000 可折抵後續服務。" />
+  <title data-i18n-title>60 分鐘關鍵決策 Second Opinion | 宸聿資訊 CY Information</title>
+  <meta name="description" data-i18n-meta="description" content="專注於技術選型、系統架構與產品方向的 60 分鐘 Second Opinion。會後提供 1 頁摘要與行動清單，協助 Founder/產品負責人/CTO 在投入開發前降低風險。NT$3,000 可折抵後續服務。" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="60 分鐘關鍵決策 Second Opinion | 宸聿資訊" />
-  <meta property="og:description" content="專注於技術選型、系統架構與產品方向的 Second Opinion。60 分鐘＋1 頁摘要，協助你在投入開發前降低風險。" />
+  <meta property="og:title" data-i18n-meta="og:title" content="60 分鐘關鍵決策 Second Opinion | 宸聿資訊" />
+  <meta property="og:description" data-i18n-meta="og:description" content="專注於技術選型、系統架構與產品方向的 Second Opinion。60 分鐘＋1 頁摘要，協助你在投入開發前降低風險。" />
   <meta property="og:type" content="website" />
 
   <!-- Favicon (emoji) -->
@@ -1437,6 +1437,10 @@
     const langButtons = document.querySelectorAll('[data-lang-switch]');
     const i18nDict = {
       zh: {
+        'title': '60 分鐘關鍵決策 Second Opinion | 宸聿資訊 CY Information',
+        'meta:description': '專注於技術選型、系統架構與產品方向的 60 分鐘 Second Opinion。會後提供 1 頁摘要與行動清單，協助 Founder/產品負責人/CTO 在投入開發前降低風險。NT$3,000 可折抵後續服務。',
+        'meta:og:title': '60 分鐘關鍵決策 Second Opinion | 宸聿資訊',
+        'meta:og:description': '專注於技術選型、系統架構與產品方向的 Second Opinion。60 分鐘＋1 頁摘要，協助你在投入開發前降低風險。',
         'brand': '宸聿資訊 | Second Opinion',
         'nav.home': '首頁',
         'nav.service': '服務',
@@ -1447,6 +1451,10 @@
         'nav.booking': '預約'
       },
       en: {
+        'title': '60-Minute Second Opinion | CY Information',
+        'meta:description': 'A 60-minute Second Opinion focused on tech choices, architecture and product direction. Includes a one-page written summary and action items to reduce risk before you commit to build. US$100.',
+        'meta:og:title': '60-Minute Second Opinion | CY Information',
+        'meta:og:description': 'A focused Second Opinion on technology choices, system architecture, and product direction. 60 minutes + a one-page summary to reduce risk before building.',
         'brand': 'CY Advisory',
         'nav.home': 'Home',
         'nav.service': 'Service',
@@ -1467,9 +1475,26 @@
       });
     }
 
+    function applyHeadI18n(lang) {
+      const dict = i18nDict[lang] || i18nDict.zh;
+      const title = dict['title'];
+      if (title) {
+        document.title = title;
+        const titleEl = document.querySelector('[data-i18n-title]');
+        if (titleEl) titleEl.textContent = title;
+      }
+      document.querySelectorAll('[data-i18n-meta]').forEach(meta => {
+        const key = meta.getAttribute('data-i18n-meta');
+        if (!key) return;
+        const val = dict[`meta:${key}`];
+        if (val) meta.setAttribute('content', val);
+      });
+    }
+
     function setLanguage(lang) {
       document.documentElement.lang = lang === 'en' ? 'en' : 'zh-Hant';
       applyNavI18n(lang);
+      applyHeadI18n(lang);
       document.querySelectorAll('.lang').forEach(el => {
         const isActive = el.getAttribute('data-lang') === lang;
         el.classList.toggle('lang-active', isActive);
