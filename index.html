@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +9,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQDGBCZ2ZG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-TQDGBCZ2ZG');
@@ -16,18 +17,25 @@
 
   <!-- SEO Meta Tags -->
   <title data-i18n-title>60 分鐘關鍵決策 Second Opinion | 宸聿資訊 CY Information</title>
-  <meta name="description" data-i18n-meta="description" content="專注於技術選型、系統架構與產品方向的 60 分鐘 Second Opinion。會後提供 1 頁摘要與行動清單，協助 Founder/產品負責人/CTO 在投入開發前降低風險。NT$3,000 可折抵後續服務。" />
+  <meta name="description" data-i18n-meta="description"
+    content="專注於技術選型、系統架構與產品方向的 60 分鐘 Second Opinion。會後提供 1 頁摘要與行動清單，協助 Founder/產品負責人/CTO 在投入開發前降低風險。NT$3,000 可折抵後續服務。" />
 
   <!-- Open Graph -->
   <meta property="og:title" data-i18n-meta="og:title" content="60 分鐘關鍵決策 Second Opinion | 宸聿資訊" />
-  <meta property="og:description" data-i18n-meta="og:description" content="專注於技術選型、系統架構與產品方向的 Second Opinion。60 分鐘＋1 頁摘要，協助你在投入開發前降低風險。" />
+  <meta property="og:description" data-i18n-meta="og:description"
+    content="專注於技術選型、系統架構與產品方向的 Second Opinion。60 分鐘＋1 頁摘要，協助你在投入開發前降低風險。" />
   <meta property="og:type" content="website" />
 
   <!-- Favicon (emoji) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>" />
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     :root {
       --max-width: 1000px;
@@ -46,7 +54,9 @@
       --radius-sm: 2px;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -61,7 +71,9 @@
     /* Navigation */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--color-border);
@@ -123,7 +135,9 @@
       transition: width 0.3s;
     }
 
-    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
     .nav-lang {
       display: flex;
@@ -159,15 +173,32 @@
     }
 
     @media (max-width: 860px) {
-      nav { padding: 1rem 0; }
-      .nav-links { gap: 1.25rem; }
+      nav {
+        padding: 1rem 0;
+      }
+
+      .nav-links {
+        gap: 1.25rem;
+      }
     }
 
     @media (max-width: 768px) {
-      .nav-container { align-items: flex-start; gap: 0.75rem; }
-      .nav-links { gap: 1rem; }
-      .hero { text-align: left; }
-      .cta-group { justify-content: flex-start; }
+      .nav-container {
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+
+      .hero {
+        text-align: left;
+      }
+
+      .cta-group {
+        justify-content: flex-start;
+      }
     }
 
     /* Language containers */
@@ -187,8 +218,15 @@
     }
 
     /* Section */
-    section { padding: var(--spacing-xl) 0; }
-    @media (max-width: 768px) { section { padding: var(--spacing-lg) 0; } }
+    section {
+      padding: var(--spacing-xl) 0;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: var(--spacing-lg) 0;
+      }
+    }
 
     /* Typography */
     h1 {
@@ -225,12 +263,23 @@
       color: var(--color-text);
     }
 
-    p { margin-bottom: 1.25rem; color: var(--color-text-light); }
+    p {
+      margin-bottom: 1.25rem;
+      color: var(--color-text-light);
+    }
 
     @media (max-width: 768px) {
-      h1 { font-size: 2.25rem; }
-      h2 { font-size: 1.75rem; }
-      h3 { font-size: 1.25rem; }
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
     }
 
     /* Hero Section */
@@ -255,7 +304,10 @@
       margin-bottom: 1.25rem;
     }
 
-    .hero-note strong { color: var(--color-text); font-weight: 500; }
+    .hero-note strong {
+      color: var(--color-text);
+      font-weight: 500;
+    }
 
     .hero-bullets {
       margin: 0 0 1.25rem 1.25rem;
@@ -316,7 +368,9 @@
       transition: all 0.3s;
     }
 
-    .card:hover { border-color: var(--color-text); }
+    .card:hover {
+      border-color: var(--color-text);
+    }
 
     /* Social Proof */
     .social-proof {
@@ -333,7 +387,9 @@
       background: transparent;
     }
 
-    .badge:hover { border: none; }
+    .badge:hover {
+      border: none;
+    }
 
     .badge-icon {
       font-size: 2rem;
@@ -355,7 +411,10 @@
     }
 
     @media (max-width: 768px) {
-      .social-proof { grid-template-columns: 1fr; gap: 2.5rem; }
+      .social-proof {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
     }
 
     /* Personas */
@@ -366,8 +425,15 @@
       margin-top: var(--spacing-md);
     }
 
-    .persona-card { padding: 0; border: none; background: transparent; }
-    .persona-card:hover { border: none; }
+    .persona-card {
+      padding: 0;
+      border: none;
+      background: transparent;
+    }
+
+    .persona-card:hover {
+      border: none;
+    }
 
     .persona-title {
       display: flex;
@@ -376,10 +442,15 @@
       margin-bottom: 1rem;
     }
 
-    .persona-icon { font-size: 1.5rem; }
+    .persona-icon {
+      font-size: 1.5rem;
+    }
 
     @media (max-width: 768px) {
-      .personas { grid-template-columns: 1fr; gap: 3rem; }
+      .personas {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
     }
 
     /* Benefits */
@@ -429,7 +500,9 @@
       padding: 0;
     }
 
-    .process-step:hover { border: none; }
+    .process-step:hover {
+      border: none;
+    }
 
     .process-number {
       width: 40px;
@@ -446,7 +519,10 @@
     }
 
     @media (max-width: 768px) {
-      .process { grid-template-columns: 1fr; gap: 3rem; }
+      .process {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
     }
 
     /* Pricing */
@@ -475,7 +551,10 @@
     }
 
     /* FAQ */
-    .faq { max-width: 750px; margin: 0 auto; }
+    .faq {
+      max-width: 750px;
+      margin: 0 auto;
+    }
 
     .faq-item {
       margin-bottom: 3rem;
@@ -483,7 +562,9 @@
       padding-bottom: 2rem;
     }
 
-    .faq-item:last-child { border-bottom: none; }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
 
     .faq-question {
       font-weight: 500;
@@ -582,7 +663,10 @@
     }
 
     @media (max-width: 768px) {
-      .bio-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .bio-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
     }
 
     /* Final CTA */
@@ -616,7 +700,11 @@
     }
 
     /* Utility */
-    .section-title { text-align: left; margin-bottom: 1rem; }
+    .section-title {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
     .section-description {
       text-align: left;
       color: var(--color-text-light);
@@ -639,412 +727,438 @@
         <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
         <li><a href="#about" data-i18n="nav.about">關於</a></li>
         <li><a href="#booking" data-i18n="nav.booking">預約</a></li>
-          <li class="nav-lang">
-            <button type="button" class="lang-switch-btn active" data-lang-switch="zh">中</button>
-            <span>/</span>
-            <button type="button" class="lang-switch-btn" data-lang-switch="en">EN</button>
-          </li>
+        <li class="nav-lang">
+          <button type="button" class="lang-switch-btn active" data-lang-switch="zh">中</button>
+          <span>/</span>
+          <button type="button" class="lang-switch-btn" data-lang-switch="en">EN</button>
+        </li>
       </ul>
     </div>
   </nav>
 
-    <div class="lang lang-zh lang-active" data-lang="zh">
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container">
-      <h1>60 分鐘關鍵決策 Second Opinion</h1>
-      <p class="hero-subtitle">在投入開發前，把技術與產品方向想清楚</p>
+  <div class="lang lang-zh lang-active" data-lang="zh">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>60 分鐘 Second Opinion：在投入之前，先把取捨看清楚</h1>
+        <p class="hero-subtitle">別急著重構、換框架或導入 AI；先把風險、成本與下一步理順。</p>
 
-      <p class="hero-note">
-        專注於 <strong>技術選型、系統架構、產品方向</strong> 的第二意見（非代操、非管理教練）
-      </p>
-
-      <ul class="hero-bullets">
-        <li>要不要重構 / 換框架 / 上雲？現在做對嗎？</li>
-        <li>MVP 架構要做到哪，才不會過早複雜化？</li>
-        <li>這個產品方向值得做嗎？如何用最低成本驗證？</li>
-        <li>vibe coding 後遺症：速度換來的技術債，怎麼判斷值不值得補？</li>
-        <li>AI 代碼可用但不可靠：測試/資安/監控要先補哪三件事？</li>
-        <li>API/雲成本失控：如何設定用量上限與預警，避免帳單爆炸？</li>
-      </ul>
-
-      <div class="cta-group">
-        <a href="https://lin.ee/52meajk" class="btn btn-primary" target="_blank" rel="noopener">立即預約</a>
-        <a href="#service" class="btn btn-secondary">了解服務</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Social Proof -->
-  <section>
-    <div class="container">
-      <div class="social-proof">
-        <div class="card badge">
-          <div class="badge-icon">🎯</div>
-          <div class="badge-title">實戰導向</div>
-          <div class="badge-desc">以「可交付、可落地」為準則，不做抽象建議</div>
-        </div>
-        <div class="card badge">
-          <div class="badge-icon">📊</div>
-          <div class="badge-title">系統化拆解</div>
-          <div class="badge-desc">用結構化方式拆解選項與取捨，讓你看清成本與風險</div>
-        </div>
-        <div class="card badge">
-          <div class="badge-icon">📄</div>
-          <div class="badge-title">可留存輸出</div>
-          <div class="badge-desc">會後提供 1 頁摘要（建議方向 / 風險盲點 / 行動清單）</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Who is this for -->
-  <section id="service">
-    <div class="container">
-      <h2 class="section-title">適合誰</h2>
-      <p class="section-description">當你在技術路線、架構取捨或產品方向上卡關，需要專業第二意見時</p>
-
-      <div class="personas">
-        <div class="card persona-card">
-          <div class="persona-title">
-            <span class="persona-icon">🚀</span>
-            <h4>Founder / 產品創辦人</h4>
-          </div>
-          <p>在投入開發前，想釐清產品方向、技術路線與驗證策略，避免走錯路後再重來</p>
-        </div>
-
-        <div class="card persona-card">
-          <div class="persona-title">
-            <span class="persona-icon">🧩</span>
-            <h4>CTO / Tech Lead</h4>
-          </div>
-          <p>面臨技術選型、架構設計、擴充與維護成本取捨，希望快速獲得可落地的第二意見</p>
-        </div>
-
-        <div class="card persona-card">
-          <div class="persona-title">
-            <span class="persona-icon">🧠</span>
-            <h4>產品負責人 / PM</h4>
-          </div>
-          <p>評估新功能或新產品線的技術成本與交付風險，需要清楚的範圍界線與驗證路徑</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Scenarios -->
-  <section id="scenarios">
-    <div class="container">
-      <h2 class="section-title">常見決策情境（具體例子）</h2>
-      <p class="section-description">這個 Second Opinion 專注於技術選型、系統架構與產品方向。你可以帶著以下問題來討論：</p>
-
-      <div class="benefits" style="max-width: 850px;">
-        <div class="benefit-item">
-          <span class="benefit-icon">✓</span>
-          <div>
-            <strong>技術選型：框架 / 雲服務 / 架構模式</strong>
-            <p>要不要導入新框架？要不要上微服務？現在做會不會過度設計？</p>
-          </div>
-        </div>
-
-        <div class="benefit-item">
-          <span class="benefit-icon">✓</span>
-          <div>
-            <strong>系統架構：可擴充性與未來成本</strong>
-            <p>哪些地方要先保留彈性？哪裡可以先用簡單方案撐過下一階段？</p>
-          </div>
-        </div>
-
-        <div class="benefit-item">
-          <span class="benefit-icon">✓</span>
-          <div>
-            <strong>產品方向：MVP 範圍與驗證路徑</strong>
-            <p>這個方向值得做嗎？如何用最低成本驗證？先做哪一段最能降低風險？</p>
-          </div>
-        </div>
-
-        <div class="benefit-item">
-          <span class="benefit-icon">✓</span>
-          <div>
-            <strong>外包方案評估（只談技術可維護性）</strong>
-            <p>方案是否可交接、可維護？是否存在 lock-in？未來接手成本會多高？</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- What you'll get -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">你會得到什麼</h2>
-      <p class="section-description">60 分鐘深度對話，產出可留存的決策輸出與下一步</p>
-
-      <div class="benefits">
-        <div class="benefit-item">
-          <span class="benefit-icon">✓</span>
-          <div>
-            <strong>清晰的決策框架</strong>
-            <p>幫你建立評估標準與取捨邏輯，判斷是否值得投入，以及如何降低風險</p>
-          </div>
-        </div>
-
-        <div class="benefit-item">
-          <span class="benefit-icon">✓</span>
-          <div>
-            <strong>風險與盲點分析</strong>
-            <p>指出可能被忽略的技術風險、交付風險與可維護性陷阱</p>
-          </div>
-        </div>
-
-        <div class="benefit-item">
-          <span class="benefit-icon">✓</span>
-          <div>
-            <strong>替代方案與取捨比較</strong>
-            <p>不只說「做或不做」，而是提出可行選項、優缺點與適用情境</p>
-          </div>
-        </div>
-
-        <div class="benefit-item">
-          <span class="benefit-icon">✓</span>
-          <div>
-            <strong>驗證順序與里程碑</strong>
-            <p>如果決定執行，先做哪個最能降低風險（驗證順序、技術拆解與里程碑）</p>
-          </div>
-        </div>
-
-        <div class="benefit-item">
-          <span class="benefit-icon">✓</span>
-          <div>
-            <strong>會後 1 頁摘要（24 小時內）</strong>
-            <p>包含建議方向、風險盲點、替代方案與行動清單，便於你與團隊對齊</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">服務流程</h2>
-      <p class="section-description">簡單三步驟，快速獲得專業建議</p>
-
-      <div class="process">
-        <div class="card process-step">
-          <div class="process-number">1</div>
-          <h4>提交背景資料（3–5 分鐘）</h4>
-          <p>預約後我們會請你補充決策背景、現況與關鍵問題（不需準備長簡報）</p>
-        </div>
-
-        <div class="card process-step">
-          <div class="process-number">2</div>
-          <h4>60 分鐘深度會議（Zoom）</h4>
-          <p>聚焦選項、取捨與風險，並釐清你最需要的決策輸出與下一步</p>
-        </div>
-
-        <div class="card process-step">
-          <div class="process-number">3</div>
-          <h4>收到 1 頁建議摘要</h4>
-          <p>會議結束後 24 小時內提供書面摘要（建議方向 / 風險盲點 / 行動清單）</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing -->
-  <section id="pricing">
-    <div class="container">
-      <h2 class="section-title">價格</h2>
-
-      <div class="pricing-card card">
-        <h3>60 分鐘 Second Opinion</h3>
-        <div class="price">NT$3,000</div>
-
-        <p>一次性費用，包含：</p>
-        <ul style="text-align: left; max-width: 460px; margin: 1.5rem 0; color: var(--color-text-light); padding-left: 1.5rem; line-height: 1.8;">
-          <li style="margin-bottom: 0.75rem;">60 分鐘深度會議（聚焦技術選型 / 架構 / 產品方向）</li>
-          <li style="margin-bottom: 0.75rem;">會後 1 頁書面摘要（24 小時內）</li>
-          <li>7 天內可用 Email 追問一次（釐清摘要內容）</li>
-        </ul>
-
-        <p class="price-note">💡 此費用可折抵後續服務（例如：長期顧問、架構評審、方案落地支援）</p>
-
-        <a href="https://lin.ee/52meajk" class="btn btn-primary" style="margin-top: var(--spacing-md);" target="_blank" rel="noopener">立即預約</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="container">
-      <h2 class="section-title">常見問題</h2>
-
-      <div class="faq">
-        <div class="faq-item">
-          <div class="faq-question">Q: 這個服務的範圍是什麼？</div>
-          <div class="faq-answer">A: Second Opinion 是「決策建議服務」。我們聚焦技術選型、系統架構與產品方向，提供判斷、取捨與下一步建議；最終決策權仍在你手上。</div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">Q: 討論內容會保密嗎？可以簽 NDA 嗎？</div>
-          <div class="faq-answer">A: 會。所有討論內容嚴格保密；如你需要，我們可在會議前簽署 NDA（或你提供版本亦可）。</div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">Q: 什麼情境最適合使用 Second Opinion？</div>
-          <div class="faq-answer">A: 當你卡在「要不要做、怎麼做、做到什麼程度」的決策點最適合，例如：是否重構、是否導入新框架、MVP 架構範圍、產品方向驗證路徑、外包方案可維護性評估等。</div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">Q: 我需要準備哪些資料？</div>
-          <div class="faq-answer">A: 預約後我們會給你一份簡短問題清單（約 3–5 分鐘）。你只需要提供現況、選項與你最在意的風險即可；不需要準備長簡報。</div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">Q: 如果會議後我還有疑問怎麼辦？</div>
-          <div class="faq-answer">A: 會後 7 天內可用 Email 追問一次（釐清摘要內容）。如果需要更深入討論或延伸評審，可再另行安排。</div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">Q: 你們會直接寫程式或代為實作嗎？</div>
-          <div class="faq-answer">A: 不會。Second Opinion 的核心是提供判斷與建議，協助你在投入開發前降低風險。如果你需要後續落地支援（例如架構評審、方案設計、陪同評估外包），可另行討論。</div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">Q: 如果我不滿意，可以退費嗎？</div>
-          <div class="faq-answer">A: 我們會先透過會前問題清單對齊期待，並提供會後 1 頁摘要與一次追問。若你認為完全未獲得任何可用輸出，請在會後 48 小時內提出，我們會個案討論處理方式。</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <!-- About -->
-  <section id="about">
-    <div class="container">
-      <div class="about-content">
-        <h2 class="section-title">關於宸聿資訊</h2>
-
-        <div class="about-intro">
-          <p>
-            宸聿資訊有限公司專注於提供「技術選型、系統架構、產品方向」的 Second Opinion。
-            顧問團隊累積 <strong>10 年產業實戰經驗</strong>，涵蓋從 0→1 的產品落地、從 MVP→規模化的架構演進，
-            目標是在你投入開發前，把取捨與風險攤開來看，避免後續重構、延期與維護成本。
-          </p>
-
-          <p>我們的核心能力：</p>
-          <div class="about-highlights">
-            <div class="about-highlight">技術選型與取捨</div>
-            <div class="about-highlight">可擴充架構設計</div>
-            <div class="about-highlight">MVP 驗證與路線圖</div>
-            <div class="about-highlight">成本 / 性能 / 維運平衡</div>
-          </div>
-
-          <p style="margin-bottom: 0;">
-            我們不提供「空泛建議」，而是以你當下的目標（速度、成本、品質、風險）為基準，
-            給出能落地的決策框架與下一步。
-          </p>
-        </div>
-
-        <p style="margin-top: var(--spacing-md); margin-bottom: var(--spacing-md);">
-          以下是顧問團隊的背景摘要：
+        <p class="hero-note">
+          聚焦 <strong>技術選型 / 架構取捨 / 產品方向</strong> 的專業建議（非代寫、非外包、非管理教練）
         </p>
 
-        <div class="bio-grid">
-          <div class="card bio-card">
-            <div class="bio-kicker">Architecture</div>
-            <div class="bio-title">0→1 架構落地：從 MVP 到可演進的基礎</div>
-            <p class="bio-desc">
-              具備從零建立雲端原生系統的經驗（API、資料庫、快取、事件/非同步流程、推播等），
-              擅長把「先做出來」與「之後能長大」取得平衡：先簡後繁、可替換、可擴充。
-            </p>
-          </div>
+        <ul class="hero-bullets">
+          <li>是否重構／換框架／上雲：現在做是否合適？會不會投入過早？</li>
+          <li>MVP 架構要做到什麼程度：哪些是必要，哪些可先延後？</li>
+          <li>產品方向是否值得持續：如何用最低成本先驗證關鍵假設？</li>
+          <li>快速開發後的技術債：是否需要修補、優先順序怎麼排？</li>
+          <li>AI 產出的程式可用但不穩：測試／資安／監控應先補哪些基礎？</li>
+          <li>雲端成本逐步攀升：如何設定上限與預警，避免帳單失控？</li>
+        </ul>
 
-          <div class="card bio-card">
-            <div class="bio-kicker">Scale</div>
-            <div class="bio-title">規模化與穩定性：高併發情境的設計取捨</div>
-            <p class="bio-desc">
-              熟悉在延遲、吞吐、可用性與成本之間做取捨，能快速指出系統瓶頸與風險點：
-              例如快取策略、資料庫連線/鎖競爭、事件一致性、流量尖峰下的降級方案等。
-            </p>
-          </div>
-
-          <div class="card bio-card">
-            <div class="bio-kicker">Product</div>
-            <div class="bio-title">把技術決策對齊產品驗證：做「有效」的第一版</div>
-            <p class="bio-desc">
-              擅長把想法轉成可驗證路徑：定義 MVP 範圍、拆里程碑、抓出最高風險假設、
-              設計「最低成本驗證」方案，避免一開始就把系統做滿卻無法證明方向。
-            </p>
-          </div>
-
-          <div class="card bio-card">
-            <div class="bio-kicker">Cloud</div>
-            <div class="bio-title">雲端成本與架構：避免「功能做到了，帳單爆了」</div>
-            <p class="bio-desc">
-              具備雲端服務成本結構理解與優化經驗，能協助你在選型時就看清隱性成本：
-              例如計費模式、網路/儲存/資料查詢成本、可觀測性成本、擴充策略造成的浪費。
-            </p>
-          </div>
-
-          <div class="card bio-card">
-            <div class="bio-kicker">Delivery</div>
-            <div class="bio-title">交付與可維護性：避免未來接手成本爆炸</div>
-            <p class="bio-desc">
-              常協助評估外包/第三方方案的「可交接性」與「可維護性」：是否 lock-in、
-              是否可替換、是否能建立最低限度的測試/監控/文件，降低未來接手與擴充成本。
-            </p>
-          </div>
-
-          <div class="card bio-card">
-            <div class="bio-kicker">Decision</div>
-            <div class="bio-title">Second Opinion 的價值：把決策變成可比較的選項</div>
-            <p class="bio-desc">
-              用結構化方式拆解選項、成本、風險與適用情境，讓你能在 60 分鐘內得到清楚結論：
-              「做 / 不做 / 先做哪個」以及下一步的行動清單。
-            </p>
-          </div>
-        </div>
-
-        <div class="about-section-divider">
-          <p style="margin-bottom: 1rem;">
-            如果你正在評估技術選型、架構演進、MVP 範圍、或產品方向是否值得投入，
-            我們可以用 60 分鐘幫你把關鍵取捨與風險先看清楚。
-          </p>
-
-          <p style="color: var(--color-text-light); font-size: 0.9rem; padding: 1rem; background: var(--color-bg-subtle); border-left: 3px solid var(--color-border);">
-            <strong style="color: var(--color-text);">註：</strong>
-            若你希望我們針對特定領域（例如資料平台、AI/RAG、支付/金流、即時系統）提供更深入評估，
-            請在預約時說明現況、限制條件與你最在意的風險點。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section id="booking">
-    <div class="container">
-      <div class="final-cta">
-        <h2 style="margin-bottom: 1rem;">準備好做出更好的技術與產品決策了嗎？</h2>
-        <p style="margin-bottom: 2rem; color: var(--color-text-light);">花 60 分鐘，把取捨與風險先看清楚，再投入開發</p>
         <div class="cta-group">
-          <a href="https://lin.ee/52meajk" class="btn btn-primary" target="_blank" rel="noopener">用 LINE 立即預約</a>
-          <!-- TODO: 將 email 改成你的正式信箱 -->
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@montfeatures.com&su=%E5%AE%B8%E8%81%BF%E8%B3%87%E8%A8%8A%E9%A1%A7%E5%95%8F%E6%9C%8D%E5%8B%99%E8%AB%AE%E8%A9%A2" class="btn btn-secondary" target="_blank" rel="noopener">Email 聯繫（Gmail）</a>
+          <a href="https://lin.ee/52meajk" class="btn btn-primary js-cta-line" data-position="hero" target="_blank"
+            rel="noopener">先確認是否合適（LINE）</a>
+          <a href="#service" class="btn btn-secondary">了解服務內容</a>
         </div>
-        <!-- <button class="copy-email" data-copy-email="info@montfeatures.com">點我複製信箱：info@montfeatures.com</button> -->
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer style="text-align: center; padding: var(--spacing-lg) 0; border-top: 1px solid var(--color-border); margin-top: var(--spacing-xl);">
-    <div class="container">
-      <p style="color: var(--color-text-light); font-size: 0.9rem;">© 2026 宸聿資訊 CY Information. All rights reserved.</p>
-    </div>
-  </footer>
+        <p style="margin-top: 0.75rem; color: var(--color-text-light); font-size: 0.95rem;">
+          你先用 3–5 分鐘說明背景，我會先回覆是否適合安排 60 分鐘；若不適合也會直說。
+        </p>
+      </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section>
+      <div class="container">
+        <div class="social-proof">
+          <div class="card badge">
+            <div class="badge-icon">🎯</div>
+            <div class="badge-title">實戰導向</div>
+            <div class="badge-desc">以「可交付、可落地」為準則，不做抽象建議</div>
+          </div>
+          <div class="card badge">
+            <div class="badge-icon">📊</div>
+            <div class="badge-title">系統化拆解</div>
+            <div class="badge-desc">用結構化方式拆解選項與取捨，讓你看清成本與風險</div>
+          </div>
+          <div class="card badge">
+            <div class="badge-icon">📄</div>
+            <div class="badge-title">可留存輸出</div>
+            <div class="badge-desc">會後提供 1 頁摘要（建議方向 / 風險盲點 / 行動清單）</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who is this for -->
+    <section id="service">
+      <div class="container">
+        <h2 class="section-title">適合誰</h2>
+        <p class="section-description">當你在技術路線、架構取捨或產品方向上卡關，需要專業第二意見時</p>
+
+        <div class="personas">
+          <div class="card persona-card">
+            <div class="persona-title">
+              <span class="persona-icon">🚀</span>
+              <h4>Founder / 產品創辦人</h4>
+            </div>
+            <p>在投入開發前，想釐清產品方向、技術路線與驗證策略，避免走錯路後再重來</p>
+          </div>
+
+          <div class="card persona-card">
+            <div class="persona-title">
+              <span class="persona-icon">🧩</span>
+              <h4>CTO / Tech Lead</h4>
+            </div>
+            <p>面臨技術選型、架構設計、擴充與維護成本取捨，希望快速獲得可落地的第二意見</p>
+          </div>
+
+          <div class="card persona-card">
+            <div class="persona-title">
+              <span class="persona-icon">🧠</span>
+              <h4>產品負責人 / PM</h4>
+            </div>
+            <p>評估新功能或新產品線的技術成本與交付風險，需要清楚的範圍界線與驗證路徑</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scenarios -->
+    <section id="scenarios">
+      <div class="container">
+        <h2 class="section-title">常見決策情境（具體例子）</h2>
+        <p class="section-description">這個 Second Opinion 專注於技術選型、系統架構與產品方向。你可以帶著以下問題來討論：</p>
+
+        <div class="benefits" style="max-width: 850px;">
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>技術選型：框架 / 雲服務 / 架構模式</strong>
+              <p>要不要導入新框架？要不要上微服務？現在做會不會過度設計？</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>系統架構：可擴充性與未來成本</strong>
+              <p>哪些地方要先保留彈性？哪裡可以先用簡單方案撐過下一階段？</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>產品方向：MVP 範圍與驗證路徑</strong>
+              <p>這個方向值得做嗎？如何用最低成本驗證？先做哪一段最能降低風險？</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>外包方案評估（只談技術可維護性）</strong>
+              <p>方案是否可交接、可維護？是否存在 lock-in？未來接手成本會多高？</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What you'll get -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">你會得到什麼</h2>
+        <p class="section-description">60 分鐘深度對話，產出可留存的決策輸出與下一步</p>
+
+        <div class="benefits">
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>清晰的決策框架</strong>
+              <p>幫你建立評估標準與取捨邏輯，判斷是否值得投入，以及如何降低風險</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>風險與盲點分析</strong>
+              <p>指出可能被忽略的技術風險、交付風險與可維護性陷阱</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>替代方案與取捨比較</strong>
+              <p>不只說「做或不做」，而是提出可行選項、優缺點與適用情境</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>驗證順序與里程碑</strong>
+              <p>如果決定執行，先做哪個最能降低風險（驗證順序、技術拆解與里程碑）</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <span class="benefit-icon">✓</span>
+            <div>
+              <strong>會後 1 頁摘要（24 小時內）</strong>
+              <p>包含建議方向、風險盲點、替代方案與行動清單，便於你與團隊對齊</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">服務流程</h2>
+        <p class="section-description">簡單三步驟，快速獲得專業建議</p>
+
+        <div class="process">
+          <div class="card process-step">
+            <div class="process-number">1</div>
+            <h4>提交背景資料（3–5 分鐘）</h4>
+            <p>預約後我們會請你補充決策背景、現況與關鍵問題（不需準備長簡報）</p>
+          </div>
+
+          <div class="card process-step">
+            <div class="process-number">2</div>
+            <h4>60 分鐘深度會議（Zoom）</h4>
+            <p>聚焦選項、取捨與風險，並釐清你最需要的決策輸出與下一步</p>
+          </div>
+
+          <div class="card process-step">
+            <div class="process-number">3</div>
+            <h4>收到 1 頁建議摘要</h4>
+            <p>會議結束後 24 小時內提供書面摘要（建議方向 / 風險盲點 / 行動清單）</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+      <div class="container">
+        <h2 class="section-title">價格</h2>
+
+        <div class="pricing-card card">
+          <h3>60 分鐘 Second Opinion</h3>
+          <div class="price">NT$3,000</div>
+
+          <p>一次性費用，包含：</p>
+          <ul
+            style="text-align: left; max-width: 460px; margin: 1.5rem 0; color: var(--color-text-light); padding-left: 1.5rem; line-height: 1.8;">
+            <li style="margin-bottom: 0.75rem;">60 分鐘深度會議（聚焦技術選型 / 架構 / 產品方向）</li>
+            <li style="margin-bottom: 0.75rem;">會後 1 頁書面摘要（24 小時內）</li>
+            <li>7 天內可用 Email 追問一次（釐清摘要內容）</li>
+          </ul>
+
+          <a href="https://lin.ee/52meajk" class="btn btn-primary js-cta-line" data-position="pricing"
+            style="margin-top: var(--spacing-md);" target="_blank" rel="noopener">
+            先確認是否合適（LINE）
+          </a>
+          <p style="margin-top: 0.75rem; color: var(--color-text-light); font-size: 0.95rem;">
+            先簡述你的現況與考量，我會先回覆是否適合約 60 分鐘；不適合也會說明原因。
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <h2 class="section-title">常見問題</h2>
+
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-question">Q: 這個服務的範圍是什麼？</div>
+            <div class="faq-answer">A: Second Opinion 是「決策建議服務」。我們聚焦技術選型、系統架構與產品方向，提供判斷、取捨與下一步建議；最終決策權仍在你手上。</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Q: 討論內容會保密嗎？可以簽 NDA 嗎？</div>
+            <div class="faq-answer">A: 會。所有討論內容嚴格保密；如你需要，我們可在會議前簽署 NDA（或你提供版本亦可）。</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Q: 什麼情境最適合使用 Second Opinion？</div>
+            <div class="faq-answer">A: 當你卡在「要不要做、怎麼做、做到什麼程度」的決策點最適合，例如：是否重構、是否導入新框架、MVP 架構範圍、產品方向驗證路徑、外包方案可維護性評估等。</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Q: 我需要準備哪些資料？</div>
+            <div class="faq-answer">A: 預約後我們會給你一份簡短問題清單（約 3–5 分鐘）。你只需要提供現況、選項與你最在意的風險即可；不需要準備長簡報。</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Q: 如果會議後我還有疑問怎麼辦？</div>
+            <div class="faq-answer">A: 會後 7 天內可用 Email 追問一次（釐清摘要內容）。如果需要更深入討論或延伸評審，可再另行安排。</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Q: 你們會直接寫程式或代為實作嗎？</div>
+            <div class="faq-answer">A: 不會。Second Opinion
+              的核心是提供判斷與建議，協助你在投入開發前降低風險。如果你需要後續落地支援（例如架構評審、方案設計、陪同評估外包），可另行討論。</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Q: 如果我不滿意，可以退費嗎？</div>
+            <div class="faq-answer">A: 我們會先透過會前問題清單對齊期待，並提供會後 1 頁摘要與一次追問。若你認為完全未獲得任何可用輸出，請在會後 48 小時內提出，我們會個案討論處理方式。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="about-content">
+          <h2 class="section-title">關於宸聿資訊</h2>
+
+          <div class="about-intro">
+            <p>
+              宸聿資訊有限公司專注於提供「技術選型、系統架構、產品方向」的 Second Opinion。
+              顧問團隊累積 <strong>10 年產業實戰經驗</strong>，涵蓋從 0→1 的產品落地、從 MVP→規模化的架構演進，
+              目標是在你投入開發前，把取捨與風險攤開來看，避免後續重構、延期與維護成本。
+            </p>
+
+            <p>我們的核心能力：</p>
+            <div class="about-highlights">
+              <div class="about-highlight">技術選型與取捨</div>
+              <div class="about-highlight">可擴充架構設計</div>
+              <div class="about-highlight">MVP 驗證與路線圖</div>
+              <div class="about-highlight">成本 / 性能 / 維運平衡</div>
+            </div>
+
+            <p style="margin-bottom: 0;">
+              我們不提供「空泛建議」，而是以你當下的目標（速度、成本、品質、風險）為基準，
+              給出能落地的決策框架與下一步。
+            </p>
+          </div>
+
+          <p style="margin-top: var(--spacing-md); margin-bottom: var(--spacing-md);">
+            以下是顧問團隊的背景摘要：
+          </p>
+
+          <div class="bio-grid">
+            <div class="card bio-card">
+              <div class="bio-kicker">Architecture</div>
+              <div class="bio-title">0→1 架構落地：從 MVP 到可演進的基礎</div>
+              <p class="bio-desc">
+                具備從零建立雲端原生系統的經驗（API、資料庫、快取、事件/非同步流程、推播等），
+                擅長把「先做出來」與「之後能長大」取得平衡：先簡後繁、可替換、可擴充。
+              </p>
+            </div>
+
+            <div class="card bio-card">
+              <div class="bio-kicker">Scale</div>
+              <div class="bio-title">規模化與穩定性：高併發情境的設計取捨</div>
+              <p class="bio-desc">
+                熟悉在延遲、吞吐、可用性與成本之間做取捨，能快速指出系統瓶頸與風險點：
+                例如快取策略、資料庫連線/鎖競爭、事件一致性、流量尖峰下的降級方案等。
+              </p>
+            </div>
+
+            <div class="card bio-card">
+              <div class="bio-kicker">Product</div>
+              <div class="bio-title">把技術決策對齊產品驗證：做「有效」的第一版</div>
+              <p class="bio-desc">
+                擅長把想法轉成可驗證路徑：定義 MVP 範圍、拆里程碑、抓出最高風險假設、
+                設計「最低成本驗證」方案，避免一開始就把系統做滿卻無法證明方向。
+              </p>
+            </div>
+
+            <div class="card bio-card">
+              <div class="bio-kicker">Cloud</div>
+              <div class="bio-title">雲端成本與架構：避免「功能做到了，帳單爆了」</div>
+              <p class="bio-desc">
+                具備雲端服務成本結構理解與優化經驗，能協助你在選型時就看清隱性成本：
+                例如計費模式、網路/儲存/資料查詢成本、可觀測性成本、擴充策略造成的浪費。
+              </p>
+            </div>
+
+            <div class="card bio-card">
+              <div class="bio-kicker">Delivery</div>
+              <div class="bio-title">交付與可維護性：避免未來接手成本爆炸</div>
+              <p class="bio-desc">
+                常協助評估外包/第三方方案的「可交接性」與「可維護性」：是否 lock-in、
+                是否可替換、是否能建立最低限度的測試/監控/文件，降低未來接手與擴充成本。
+              </p>
+            </div>
+
+            <div class="card bio-card">
+              <div class="bio-kicker">Decision</div>
+              <div class="bio-title">Second Opinion 的價值：把決策變成可比較的選項</div>
+              <p class="bio-desc">
+                用結構化方式拆解選項、成本、風險與適用情境，讓你能在 60 分鐘內得到清楚結論：
+                「做 / 不做 / 先做哪個」以及下一步的行動清單。
+              </p>
+            </div>
+          </div>
+
+          <div class="about-section-divider">
+            <p style="margin-bottom: 1rem;">
+              如果你正在評估技術選型、架構演進、MVP 範圍、或產品方向是否值得投入，
+              我們可以用 60 分鐘幫你把關鍵取捨與風險先看清楚。
+            </p>
+
+            <p
+              style="color: var(--color-text-light); font-size: 0.9rem; padding: 1rem; background: var(--color-bg-subtle); border-left: 3px solid var(--color-border);">
+              <strong style="color: var(--color-text);">註：</strong>
+              若你希望我們針對特定領域（例如資料平台、AI/RAG、支付/金流、即時系統）提供更深入評估，
+              請在預約時說明現況、限制條件與你最在意的風險點。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="booking">
+      <div class="container">
+        <div class="final-cta">
+          <h2 style="margin-bottom: 1rem;">在投入之前，先確認這一步是否合適</h2>
+          <p style="margin-bottom: 2rem; color: var(--color-text-light);">
+            你先簡述背景與目標，我會先回覆是否適合 Second Opinion，以及你該準備哪些資訊。
+          </p>
+
+          <div class="cta-group">
+            <a href="https://lin.ee/52meajk" class="btn btn-primary js-cta-line" data-position="booking" target="_blank"
+              rel="noopener">
+              先確認是否合適（LINE）
+            </a>
+            <a href="mailto:info@montfeatures.com?subject=%E5%AE%B8%E8%81%BF%E8%B3%87%E8%A8%8A%20Second%20Opinion%20%E8%AB%AE%E8%A9%A2"
+              class="btn btn-secondary js-cta-email" data-position="booking">
+              Email 聯繫
+            </a>
+          </div>
+
+          <p style="margin-top: 0.75rem; color: var(--color-text-light); font-size: 0.95rem;">
+            這不是銷售流程：我會先判斷是否適合安排 60 分鐘；若不適合也會坦白告知。
+          </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      style="text-align: center; padding: var(--spacing-lg) 0; border-top: 1px solid var(--color-border); margin-top: var(--spacing-xl);">
+      <div class="container">
+        <p style="color: var(--color-text-light); font-size: 0.9rem;">© 2026 宸聿資訊 CY Information. All rights reserved.
+        </p>
+      </div>
+    </footer>
 
   </div> <!-- /.lang-zh -->
 
@@ -1052,44 +1166,34 @@
     <!-- Hero Section (EN) -->
     <section id="home" class="hero">
       <div class="container">
-        <h1>60-Minute Second Opinion for Critical Decisions</h1>
-        <p class="hero-subtitle">
-          Clarify your technical and product decisions before you commit to build
-        </p>
-    
+        <h1>A 60-Minute Second Opinion — Before You Commit to Build</h1>
+        <p class="hero-subtitle">Before you rebuild, change frameworks, or roll out AI, let’s get clear on the
+          trade-offs, risks, and next steps.</p>
+
         <p class="hero-note">
-          Focused on <strong>technology choices, system architecture, and product direction</strong> —
-          not management coaching or execution outsourcing.
+          Focused on <strong>tech choices, system architecture, and product direction</strong> — not implementation,
+          outsourcing, or coaching.
         </p>
-    
-        <p class="hero-note">
-          This is typically where teams get stuck after moving fast with AI.
-        </p>
-    
+
         <ul class="hero-bullets">
-          <li>
-            We moved fast with AI / vibe coding —
-            now we’re unsure whether to refactor, change frameworks,
-            or just live with what we shipped.
-          </li>
-          <li>
-            Which parts of the MVP architecture actually matter,
-            and which ones are premature or unnecessary at this stage?
-          </li>
-          <li>
-            Is this product direction worth continuing,
-            or are we scaling something that hasn’t been properly validated yet?
-          </li>
+          <li>Should we rebuild, switch frameworks, or move to the cloud — or is it too early?</li>
+          <li>What parts of the MVP actually matter right now, and what can wait?</li>
+          <li>Is this product direction worth pursuing — and how do we validate it cheaply?</li>
+          <li>We shipped fast with AI — what tech debt is real, and what’s noise?</li>
+          <li>AI-generated code “works” — what do we fix first for testing, security, and reliability?</li>
+          <li>Cloud spend keeps creeping up — where should guardrails and alerts go?</li>
         </ul>
-    
+
         <div class="cta-group">
-          <a href="https://lin.ee/52meajk" class="btn btn-primary" target="_blank" rel="noopener">
-            Book via LINE
-          </a>
-          <a href="#service" class="btn btn-secondary">
-            View the service
-          </a>
+          <a href="https://lin.ee/52meajk" class="btn btn-primary js-cta-line" data-position="hero" target="_blank"
+            rel="noopener">Start with a quick fit check (LINE)</a>
+          <a href="#service" class="btn btn-secondary">See if this is for you</a>
         </div>
+
+        <p style="margin-top: 0.75rem; color: var(--color-text-light); font-size: 0.95rem;">
+          Takes 3–5 minutes. Share context first — I’ll tell you if a 60-minute session is actually the right move. No
+          sales.
+        </p>
       </div>
     </section>
     <!-- Social Proof (EN) -->
@@ -1119,7 +1223,8 @@
     <section id="service">
       <div class="container">
         <h2 class="section-title">Who This Is For</h2>
-        <p class="section-description">When you are stuck on technical direction, architecture trade-offs, or product bets, and need a sharp second opinion.</p>
+        <p class="section-description">When you are stuck on technical direction, architecture trade-offs, or product
+          bets, and need a sharp second opinion.</p>
 
         <div class="personas">
           <div class="card persona-card">
@@ -1127,7 +1232,8 @@
               <span class="persona-icon">🚀</span>
               <h4>Founders / Product Owners</h4>
             </div>
-            <p>Before investing in development, you want clarity on product direction, tech approach, and validation strategy.</p>
+            <p>Before investing in development, you want clarity on product direction, tech approach, and validation
+              strategy.</p>
           </div>
 
           <div class="card persona-card">
@@ -1135,7 +1241,8 @@
               <span class="persona-icon">🧩</span>
               <h4>CTOs / Tech Leads</h4>
             </div>
-            <p>You are making calls on stack, architecture, scalability and maintainability, and want a sparring partner.</p>
+            <p>You are making calls on stack, architecture, scalability and maintainability, and want a sparring
+              partner.</p>
           </div>
 
           <div class="card persona-card">
@@ -1143,7 +1250,8 @@
               <span class="persona-icon">🧠</span>
               <h4>Product Managers</h4>
             </div>
-            <p>You need a realistic view of technical cost and delivery risk before committing to a new product line or major feature.</p>
+            <p>You need a realistic view of technical cost and delivery risk before committing to a new product line or
+              major feature.</p>
           </div>
         </div>
       </div>
@@ -1153,14 +1261,16 @@
     <section id="scenarios">
       <div class="container">
         <h2 class="section-title">Typical Decision Scenarios</h2>
-        <p class="section-description">This Second Opinion is focused on technology choices, system architecture, and product direction. Common topics include:</p>
+        <p class="section-description">This Second Opinion is focused on technology choices, system architecture, and
+          product direction. Common topics include:</p>
 
         <div class="benefits" style="max-width: 850px;">
           <div class="benefit-item">
             <span class="benefit-icon">✓</span>
             <div>
               <strong>Technology Choices</strong>
-              <p>Which framework, cloud service, or architecture style to adopt — and what it really costs over time.</p>
+              <p>Which framework, cloud service, or architecture style to adopt — and what it really costs over time.
+              </p>
             </div>
           </div>
 
@@ -1168,7 +1278,8 @@
             <span class="benefit-icon">✓</span>
             <div>
               <strong>Architecture &amp; Scalability</strong>
-              <p>How to balance future scalability with today's constraints, and where to keep things intentionally simple.</p>
+              <p>How to balance future scalability with today's constraints, and where to keep things intentionally
+                simple.</p>
             </div>
           </div>
 
@@ -1176,7 +1287,8 @@
             <span class="benefit-icon">✓</span>
             <div>
               <strong>MVP Scope &amp; Validation</strong>
-              <p>What belongs in the first version, what can wait, and how to design a path to de-risk the biggest assumptions.</p>
+              <p>What belongs in the first version, what can wait, and how to design a path to de-risk the biggest
+                assumptions.</p>
             </div>
           </div>
 
@@ -1184,7 +1296,8 @@
             <span class="benefit-icon">✓</span>
             <div>
               <strong>Vendor / Outsourcing Evaluation</strong>
-              <p>Whether proposals are maintainable, handover-friendly, and avoid hidden lock-in and long-term cost traps.</p>
+              <p>Whether proposals are maintainable, handover-friendly, and avoid hidden lock-in and long-term cost
+                traps.</p>
             </div>
           </div>
         </div>
@@ -1195,7 +1308,8 @@
     <section>
       <div class="container">
         <h2 class="section-title">What You Get</h2>
-        <p class="section-description">A 60-minute deep-dive that produces a concrete decision output and next steps.</p>
+        <p class="section-description">A 60-minute deep-dive that produces a concrete decision output and next steps.
+        </p>
 
         <div class="benefits">
           <div class="benefit-item">
@@ -1210,7 +1324,8 @@
             <span class="benefit-icon">✓</span>
             <div>
               <strong>Risk &amp; Blind Spot Analysis</strong>
-              <p>Technical, delivery, and maintainability risks that are easy to overlook when you are close to the problem.</p>
+              <p>Technical, delivery, and maintainability risks that are easy to overlook when you are close to the
+                problem.</p>
             </div>
           </div>
 
@@ -1234,7 +1349,8 @@
             <span class="benefit-icon">✓</span>
             <div>
               <strong>One-Page Summary (within 24 hours)</strong>
-              <p>Written output you can share with your team: recommendations, risks, alternatives, and action items.</p>
+              <p>Written output you can share with your team: recommendations, risks, alternatives, and action items.
+              </p>
             </div>
           </div>
         </div>
@@ -1279,15 +1395,24 @@
           <div class="price">US$100</div>
 
           <p>One-off fee, including:</p>
-          <ul style="text-align: left; max-width: 460px; margin: 1.5rem 0; color: var(--color-text-light); padding-left: 1.5rem; line-height: 1.8;">
-            <li style="margin-bottom: 0.75rem;">60-minute deep-dive session (technology / architecture / product direction)</li>
+          <ul
+            style="text-align: left; max-width: 460px; margin: 1.5rem 0; color: var(--color-text-light); padding-left: 1.5rem; line-height: 1.8;">
+            <li style="margin-bottom: 0.75rem;">60-minute deep-dive session (technology / architecture / product
+              direction)</li>
             <li style="margin-bottom: 0.75rem;">One-page written summary within 24 hours</li>
             <li>One follow-up email within 7 days to clarify the summary</li>
           </ul>
 
-          <p class="price-note">💡 This fee can be credited towards longer-term advisory or follow-up architecture work.</p>
+          <p class="price-note">💡 This fee can be credited towards longer-term advisory or follow-up architecture work.
+          </p>
 
-          <a href="https://lin.ee/52meajk" class="btn btn-primary" style="margin-top: var(--spacing-md);" target="_blank" rel="noopener">Book via LINE</a>
+          <a href="https://lin.ee/52meajk" class="btn btn-primary js-cta-line" data-position="pricing"
+            style="margin-top: var(--spacing-md);" target="_blank" rel="noopener">
+            Start with a quick fit check (LINE)
+          </a>
+          <p style="margin-top: 0.75rem; color: var(--color-text-light); font-size: 0.95rem;">
+            Send a short overview. I’ll confirm whether this session fits your situation and what to bring to the call.
+          </p>
         </div>
       </div>
     </section>
@@ -1300,32 +1425,42 @@
         <div class="faq">
           <div class="faq-item">
             <div class="faq-question">Q: What exactly is included in this service?</div>
-            <div class="faq-answer">A: This is a decision advisory session. We focus on technology choices, architecture, and product direction, and provide recommendations and next steps. Final decisions remain with you.</div>
+            <div class="faq-answer">A: This is a decision advisory session. We focus on technology choices,
+              architecture, and product direction, and provide recommendations and next steps. Final decisions remain
+              with you.</div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question">Q: Is the conversation confidential? Can we sign an NDA?</div>
-            <div class="faq-answer">A: Yes. All discussions are confidential, and we can sign your NDA or provide one before the call.</div>
+            <div class="faq-answer">A: Yes. All discussions are confidential, and we can sign your NDA or provide one
+              before the call.</div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question">Q: What situations are a good fit?</div>
-            <div class="faq-answer">A: When you are deciding whether to rebuild, re-architect, adopt a new technology, commit to a new product direction, or evaluate an outsourcing proposal — and you want a sharp second opinion.</div>
+            <div class="faq-answer">A: When you are deciding whether to rebuild, re-architect, adopt a new technology,
+              commit to a new product direction, or evaluate an outsourcing proposal — and you want a sharp second
+              opinion.</div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question">Q: What do I need to prepare?</div>
-            <div class="faq-answer">A: After booking, we send you a short intake form. 3–5 minutes is usually enough; slides are not required.</div>
+            <div class="faq-answer">A: After booking, we send you a short intake form. 3–5 minutes is usually enough;
+              slides are not required.</div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question">Q: Do you write code or implement for us?</div>
-            <div class="faq-answer">A: Not in this service. The focus is on decisions and recommendations. If you need follow-on support (architecture review, implementation guidance, vendor evaluation), we can discuss separately.</div>
+            <div class="faq-answer">A: Not in this service. The focus is on decisions and recommendations. If you need
+              follow-on support (architecture review, implementation guidance, vendor evaluation), we can discuss
+              separately.</div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question">Q: What if I feel I didn't get value?</div>
-            <div class="faq-answer">A: We align expectations before the call and provide a written summary plus one follow-up email. If you truly feel you received no usable output, contact us within 48 hours and we will review the case.</div>
+            <div class="faq-answer">A: We align expectations before the call and provide a written summary plus one
+              follow-up email. If you truly feel you received no usable output, contact us within 48 hours and we will
+              review the case.</div>
           </div>
         </div>
       </div>
@@ -1339,7 +1474,8 @@
 
           <div class="about-intro">
             <p>
-              CY Information focuses on Second Opinion work around <strong>technology choices, system architecture, and product direction</strong>.
+              CY Information focuses on Second Opinion work around <strong>technology choices, system architecture, and
+                product direction</strong>.
               We bring around 10 years of hands-on experience across greenfield products and scaling existing systems.
             </p>
 
@@ -1352,7 +1488,8 @@
             </div>
 
             <p style="margin-bottom: 0;">
-              The goal is not a “perfect design on paper”, but decisions you can actually execute with your current team and constraints.
+              The goal is not a “perfect design on paper”, but decisions you can actually execute with your current team
+              and constraints.
             </p>
           </div>
 
@@ -1374,7 +1511,8 @@
               <div class="bio-kicker">Scale</div>
               <div class="bio-title">Scaling and stability under real constraints</div>
               <p class="bio-desc">
-                Familiar with latency, throughput, availability and cost trade-offs, and how to spot likely bottlenecks and failure modes early.
+                Familiar with latency, throughput, availability and cost trade-offs, and how to spot likely bottlenecks
+                and failure modes early.
               </p>
             </div>
 
@@ -1382,7 +1520,8 @@
               <div class="bio-kicker">Product</div>
               <div class="bio-title">Aligning tech decisions with product proof</div>
               <p class="bio-desc">
-                Turning ideas into testable paths: defining MVP scope, milestones, and cheap validation steps so you learn fast without over-building.
+                Turning ideas into testable paths: defining MVP scope, milestones, and cheap validation steps so you
+                learn fast without over-building.
               </p>
             </div>
           </div>
@@ -1394,18 +1533,29 @@
     <section id="booking">
       <div class="container">
         <div class="final-cta">
-          <h2 style="margin-bottom: 1rem;">Ready to make better technical and product decisions?</h2>
-          <p style="margin-bottom: 2rem; color: var(--color-text-light);">Spend 60 minutes now to avoid expensive rework later.</p>
+          <h2 style="margin-bottom: 1rem;">Not sure whether to move forward? Start with a quick fit check.</h2>
+          <p style="margin-bottom: 2rem; color: var(--color-text-light);">
+            Share a bit of context first. I’ll tell you whether a 60-minute Second Opinion is worth it — and what we
+            should focus on.
+          </p>
+
           <div class="cta-group">
-            <a href="https://lin.ee/52meajk" class="btn btn-primary" target="_blank" rel="noopener">Book via LINE</a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@montfeatures.com&su=%E5%AE%B8%E8%81%BF%E8%B3%87%E8%A8%8A%E9%A1%A7%E5%95%8F%E6%9C%8D%E5%8B%99%E8%AB%AE%E8%A9%A2" class="btn btn-secondary" target="_blank" rel="noopener">Email (Gmail)</a>
+            <a href="https://lin.ee/52meajk" class="btn btn-primary js-cta-line" data-position="booking" target="_blank"
+              rel="noopener">Start with a quick fit check (LINE)</a>
+            <a href="mailto:info@montfeatures.com?subject=Second%20Opinion%20Inquiry"
+              class="btn btn-secondary js-cta-email" data-position="booking">Email</a>
           </div>
+
+          <p style="margin-top: 0.75rem; color: var(--color-text-light); font-size: 0.95rem;">
+            This isn’t a sales flow. If it’s not a fit, I’ll tell you upfront.
+          </p>
         </div>
       </div>
     </section>
 
     <!-- Footer (EN) -->
-    <footer style="text-align: center; padding: var(--spacing-lg) 0; border-top: 1px solid var(--color-border); margin-top: var(--spacing-xl);">
+    <footer
+      style="text-align: center; padding: var(--spacing-lg) 0; border-top: 1px solid var(--color-border); margin-top: var(--spacing-xl);">
       <div class="container">
         <p style="color: var(--color-text-light); font-size: 0.9rem;">© 2026 CY Information. All rights reserved.</p>
       </div>
@@ -1505,7 +1655,7 @@
       });
       try {
         localStorage.setItem('cy-lang', lang);
-      } catch (_) {}
+      } catch (_) { }
     }
 
     langButtons.forEach(btn => {
@@ -1531,6 +1681,26 @@
     } catch (_) {
       setLanguage('zh');
     }
+
+    // Google Analytics Event Tracking for CTAs
+    document.querySelectorAll('.js-cta-line, .js-cta-email').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const method = this.classList.contains('js-cta-line') ? 'line' : 'email';
+        const position = this.getAttribute('data-position') || 'unknown';
+        const currentLang = document.documentElement.lang === 'en' ? 'en' : 'zh';
+
+        if (typeof gtag === 'function') {
+          gtag('event', 'click_cta', {
+            'method': method,
+            'position': position,
+            'current_lang': currentLang
+          });
+          // Debug log (optional, remove in production if preferred)
+          console.log(`GA Event: click_cta | method: ${method} | position: ${position} | lang: ${currentLang}`);
+        }
+      });
+    });
   </script>
 </body>
+
 </html>
